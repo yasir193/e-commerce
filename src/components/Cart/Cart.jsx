@@ -51,6 +51,7 @@ export default function Cart() {
                       <h6 className="text-center">
                         {item.product.title.slice(0, item.product.title.indexOf(" ", 10))}
                       </h6>
+                      
                       <h6>Count: {item.count}</h6>
                       <span>price:{item.price}</span>
                       </div>

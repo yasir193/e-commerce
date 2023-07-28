@@ -14,7 +14,7 @@ import $ from 'jquery'
 
 export default function Home() {
 
-  const {addProductToCart , removeFromCart} = useContext(CartContext);
+  const {addProductToCart , removeFromCart } = useContext(CartContext);
 
   async function getAllProducts() {
     try {
@@ -39,15 +39,18 @@ export default function Home() {
   }
 
 
-  function addProduct(id , index){
-    addProductToCart(id);
-    $(`.success`).fadeIn(1000 , function(){
-      $(`#add${index}`).fadeOut(1000);
-      $(`#remove${index}`).fadeIn(1000);
-      setTimeout(() => {
-        $(`.success`).fadeOut(1000)
-      }, 2000);
-    })
+  async function addProduct(id , index){
+    if (await addProductToCart(id) === true ) {
+      
+      $(`.success`).fadeIn(1000 , function(){
+        $(`#add${index}`).fadeOut(1000);
+        $(`#remove${index}`).fadeIn(1000);
+        setTimeout(() => {
+          $(`.success`).fadeOut(1000)
+        }, 2000);
+      })
+    }
+    
 
   }
 
@@ -87,7 +90,7 @@ export default function Home() {
                       <span>price:{item.price}</span>
                     </div>
                     </Link>
-                    <button id={`add${index}`} onClick={function (){addProduct(item.id , index)}} className="btn btn-success w-100 m-auto">add to cart+</button>
+                    <button id={`add${index}`} onClick={function (){addProduct(item._id , index)}} className="btn btn-success w-100 m-auto">add to cart+</button>
                     <button id={`remove${index}`} onClick={function(){ removeProduct(item.id , index) }} style={{'display':'none'}} className="btn btn-danger w-100 m-auto">remove from cart-</button>
 
                   </div>

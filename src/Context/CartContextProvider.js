@@ -37,10 +37,10 @@ export default function CartContextProvider({children}) {
     {
       headers: {'token' : localStorage.getItem('token')}
     })
-    if(   data.message === 'success'){
-      setCartProducts(data.data.products);
-      setNumOfCartItems(data.numOfCartItems);
-        setTotalCartPrice(data.data.totalCartPrice);
+    
+
+    if( data.status === 'success'){
+
         return true;
     }else{
       return false
@@ -63,12 +63,10 @@ export default function CartContextProvider({children}) {
       
     } catch (error) {
       console.log(error);
-      if (error.response.status === 404 ) {
+      if (error.response.status === 404 && location.pathname === '/cart' ) {
         $('.emptyCart').fadeIn(1000 , function(){
-          $('.emptyCart').fadeOut(1000)
-          setTimeout(() => {
-            navigate('/home')
-          }, 2000);
+          $('.emptyCart').fadeOut(5000)
+          
         })
       }
     }
