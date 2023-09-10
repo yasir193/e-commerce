@@ -70,8 +70,8 @@ export default function Payment() {
           <input type="text" className='form-control my-3' placeholder='enter your phone' id='phone' />
           <input type="text" className='form-control my-3' placeholder='enter your city' id='city' />
           <div className='text-center'>
-          <button onClick={confirmOrderCash} type='button' className='btn btn-primary me-4'> Confirm Cash</button>
-          <button onClick={confirmOrderCredit} type='button' className='btn btn-primary ms-4'> Confirm Credit</button>
+          <button onClick={confirmOrderCash} type='button' className='btn   text-white tw-bg-sky-700 hover:tw-bg-sky-800/50 mx-4'> Confirm Cash</button>
+          <button onClick={confirmOrderCredit} type='button' className='btn text-white tw-bg-sky-700 hover:tw-bg-sky-800/50 mx-4'> Confirm Credit</button>
           </div>
         </form>
       </div>

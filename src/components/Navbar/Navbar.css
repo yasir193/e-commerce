@@ -1,3 +1,8 @@
 .cursor-pointer{
   cursor: pointer;
 }
+@media (max-width:750px) {
+  li .edit{
+    margin-right: 0px !important;
+  }
+}

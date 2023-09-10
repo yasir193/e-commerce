@@ -1,6 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .navbar,footer{
   background-color: #eee;
 }
 body{
   background: url("./images/light-patten.svg");
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400&family=Inconsolata:wght@200;400;500;900&family=Poppins:wght@200;300;500;600;700;800;900&display=swap');

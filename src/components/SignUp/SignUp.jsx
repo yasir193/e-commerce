@@ -43,7 +43,7 @@ export default function SignUp() {
                 errors.email ="Email must be valid"
             };
             if(!values.phone.match(/^01[0125][0-9]{8}$/)){
-                errors.phone = "Your number is wrong"
+                errors.phone = "Enter a valid Egyptian number"
             };
             if(values.password.length < 8){
                 errors.password="your password must be 8 charachters or more"

@@ -13,6 +13,7 @@ import $ from 'jquery'
 
 
 export default function Home() {
+  
 
   const {addProductToCart , removeFromCart } = useContext(CartContext);
 
@@ -71,26 +72,26 @@ export default function Home() {
               return (
                 <div key={index} className="col-md-2 mt-4 position-relative mb-3">
                   
-                  <div className="bg-primary pb-2 rounded-bottom">
+                  <div className=" tw-bg-sky-700/50 p-1 tw-rounded-tl-xl tw-rounded-br-xl tw-border-sky-700/50 tw-rounded-right">
                   <Link className="text-decoration-none" to={`/productdetails/${item._id}`}>
                     <img
                       className="w-100"
-                      src={item.imageCover}
+                      src={item.imageCover.replace('jpeg','webp')}
                       alt={item.title}
                     />
                   
-                  <div className="bg-primary p-1 rounded-1 text-white position-absolute top-0 end-0">
+                  <div className="tw-bg-sky-700 p-1 rounded-1 text-white position-absolute top-0 end-0">
                     <span className="">{item.ratingsAverage}</span>
                   </div>
-                    <div className="text-white ">
-                      <h6 className="text-center">
+                    <div className="text-black ">
+                      <h6 className="text-center my-2">
                         {item.title.slice(0, item.title.indexOf(" ", 10))}
                       </h6>
-                      <h6 className="">{item.category.name}</h6>
+                      <h6 className="mb-1">{item.category.name}</h6>
                       <span>price:{item.price}</span>
                     </div>
                     </Link>
-                    <button id={`add${index}`} onClick={function (){addProduct(item._id , index)}} className="btn btn-success w-100 m-auto">add to cart+</button>
+                    <button id={`add${index}`} onClick={function (){addProduct(item._id , index)}} className="btn tw-bg-sky-700 text-white hover:tw-bg-sky-800/50 p-2 w-100 m-auto">add to cart+</button>
                     <button id={`remove${index}`} onClick={function(){ removeProduct(item.id , index) }} style={{'display':'none'}} className="btn btn-danger w-100 m-auto">remove from cart-</button>
 
                   </div>

@@ -51,8 +51,8 @@ export default function BrandProducts() {
       {brandPro.length === 0 ? <h2 className='text-center py-4'> No products available right now... </h2> : brandPro.map(function(item , index){return <div key={index} className="col-md-3">
         <Link className='text-decoration-none' to={`/productdetails/${item._id}`}><div>
           <img className='w-100' src={item.imageCover} alt={item.title} />
-          <div className='bg-primary text-white pb-2 rounded-bottom'>
-          <h5 className='text-center'>{item.title.slice(0, item.title.indexOf(" ", 10))}</h5>
+          <div className='tw-bg-sky-700 overflow-hidden text-white pb-2 rounded-bottom'>
+          <h5 className='text-center my-2'>{item.title.slice(0, item.title.indexOf(" ", 10))}</h5>
           <h5 className='ms-2'>price: {item.price}</h5>
           </div>
         </div></Link>

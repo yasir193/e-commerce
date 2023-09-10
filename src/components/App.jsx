@@ -66,7 +66,7 @@ export default function App() {
       {path:"login",element:<Login getUserData={ getUserData } />},
       {path:"signup",element:<SignUp/>},
       {path:"allorders",element:<ProtectedRoute><AllOrders currentUser={currentUser}/></ProtectedRoute>},
-      {path:"cart",element:<CartContextProvider><Cart/></CartContextProvider>},
+      {path:"cart",element:<ProtectedRoute><CartContextProvider><Cart/></CartContextProvider></ProtectedRoute>},
       {path:"home",element:<CartContextProvider><Home/></CartContextProvider>},
       {path:"profile",element:<ProtectedRoute><Profile currentUser={currentUser}  /></ProtectedRoute>},
       {path:"productdetails/:_id",element:<ProtectedRoute><CartContextProvider><DetailsForProduct/></CartContextProvider></ProtectedRoute>},

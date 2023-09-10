@@ -28,22 +28,22 @@ export default function SimpleSlider() {
         
         <Slider {...settings}>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-2.jpeg')} alt="sider1" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-2.webp')} alt="sider1" />
           </div>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-1.jpeg')} alt="sider2" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-1.webp')} alt="sider2" />
           </div>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-2.jpeg')} alt="sider3" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-2.webp')} alt="sider3" />
           </div>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-3.jpeg')} alt="sider4" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/slider-image-3.webp')} alt="sider4" />
           </div>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/grocery-banner-2.jpeg')} alt="sider5" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/grocery-banner-2.webp')} alt="sider5" />
           </div>
           <div>
-            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/grocery-banner.png')} alt="sider6" />
+            <img style={{'width':'100%', 'height':'300px'}} src={require('../../images/grocery-banner.webp')} alt="sider6" />
           </div>
         </Slider>
       </div>

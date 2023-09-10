@@ -7,7 +7,7 @@ import $ from 'jquery'
 export const CartContext = createContext()
 export default function CartContextProvider({children}) {
   const location = useLocation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   async function updateCount(id , realCount){
     try{
       const {data} = await axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${id}`,{

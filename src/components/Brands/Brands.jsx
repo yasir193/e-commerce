@@ -39,7 +39,7 @@ export default function Brands() {
   {brands? <div className='container'>
     <div className='row'>
         <div className='col-md-3 align-self-end mb-3'>
-          <h3 className='text-primary'>Our Brands</h3>
+          <h3 className='tw-text-sky-700'>Our Brands</h3>
           <p className='mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quam libero </p>
         </div>
       {brands.map(function(item , index){ return <div key={index} className='col-md-3 position-relative mb-3'>
@@ -47,7 +47,7 @@ export default function Brands() {
             <img className='w-100' src={item.image} alt={item.name} />
           </div>
           <div className=''>
-            <h6 className='text-center fs-4 text-primary'>{item.name}</h6>
+            <h6 className='text-center fs-4 tw-text-sky-700'>{item.name}</h6>
             
             
           </div></Link>

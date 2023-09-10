@@ -28,11 +28,11 @@ export default function AllOrders({currentUser}) {
   return <>
     {allOrders? <div className='container'>
       <div className='row'>
-        {allOrders.map(function( item  ,  index  ){return <div key={index} className="col-md-3">
-          <div className='bg-primary rounded-3'>
-            <h5>Price: {item.totalOrderPrice}</h5>
-            <h5>Order Type: {item.paymentMethodType}</h5>
-            <p>This order was delivered to ({item.shippingAddress.details}) in ({item.shippingAddress.city}) with this number ({item.shippingAddress.phone}) </p>
+        {allOrders.map(function( item  ,  index  ){return <div key={index} className="col-md-3 m-3">
+          <div className='tw-bg-sky-700 overflow-hidden tw-text-white/90 rounded-3'>
+            <h5 className='my-2 ms-1'>Price: {item.totalOrderPrice}</h5>
+            <h5 className='my-2 ms-1'>Order Type: {item.paymentMethodType}</h5>
+            <p className='my-2 ms-1'> This order was delivered to ({item.shippingAddress.details}) in ({item.shippingAddress.city}) with this number ({item.shippingAddress.phone}) </p>
           </div>
         </div>})}
       </div>
